@@ -35,6 +35,12 @@ Weather App Project is a repository consisting of the following files:
 
 ## 🛠 Built With <a name="built-with"></a>
 
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Weather App Live Link](https://helpful-druid-7bccdf.netlify.app/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ### Tech Stack <a name="tech-stack"></a>
 
 
@@ -43,12 +49,6 @@ Weather App Project is a repository consisting of the following files:
     <li><a href="https://microverse.notion.site/HTML-CSS-Get-a-head-start-275eb85fd34b4416aa06ec635d69cdaf">CSS</a></li>
        <li><a href="https://microverse.notion.site/HTML-CSS-Get-a-head-start-275eb85fd34b4416aa06ec635d69cdaf">React-JS</a></li>
   </ul>
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [Weather App Live Link](https://jubaer919.github.io/weather-app/)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Presentation Video <a name="video-presentation"></a>
 
