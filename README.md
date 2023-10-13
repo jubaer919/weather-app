@@ -7,6 +7,7 @@
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
+  - [🚀 Video Presentation](#video-presentation)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -45,6 +46,13 @@ Weather App Project is a repository consisting of the following files:
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
+- [Weather App Live Link](https://jubaer919.github.io/weather-app/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Presentation Video <a name="video-presentation"></a>
+
+<iframe width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

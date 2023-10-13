@@ -8,12 +8,12 @@
 }
 
 .nav {
- background-color: #dd4883;
- padding: 1rem 8px;
- width: calc(100% - 16px);
- display: flex;
- align-items: center;
- justify-content: space-between;
+  background-color: #dd4883;
+  padding: 1rem 8px;
+  width: calc(100% - 16px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .nav img {
@@ -57,7 +57,7 @@
   outline: none;
   border: none;
   font-size: 12px;
-  border: 5px;
+  border-radius: 5px;
   background-color: #ce4177;
   color: white;
 }
