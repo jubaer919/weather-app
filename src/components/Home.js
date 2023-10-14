@@ -10,29 +10,41 @@ const cities = ['London', 'Tokyo', 'Rome', 'Madrid', 'Delhi', 'Bali', 'Cairo', '
 
 const Home = () => {
   const [cityInput, setCityInput] = useState('');
+  const [filteredCities, setFilteredCities] = useState(cities);
   const dispatch = useDispatch();
   const navigation = useNavigate();
 
-  function changeHandeler(event) {
+  function changeHandler(event) {
+    const userInput = event.target.value.toLowerCase();
+    const filtered = cities.filter((city) => city.toLowerCase().includes(userInput));
+    setFilteredCities(filtered);
     setCityInput(event.target.value);
   }
 
-  const clickHandler = (city) => {
+  function clickHandler(city) {
     dispatch(fetchCityWeather(city))
       .then((response) => {
         if (response.payload) {
           navigation('/details');
         }
       });
-  };
+  }
 
-  function submitChangeHandeler(event) {
+  function submitChangeHandler(event) {
     event.preventDefault();
-    if (cityInput.trim() === 0) {
+    const userInput = cityInput.trim().toLowerCase();
+
+    if (userInput === '') {
+      setFilteredCities(cities);
       return;
     }
-    clickHandler(cityInput);
-    setCityInput('');
+
+    const matchingCities = cities.filter((city) => city.toLowerCase() === userInput);
+
+    if (matchingCities.length === 1) {
+      clickHandler(matchingCities[0]);
+      setCityInput('');
+    }
   }
 
   return (
@@ -44,24 +56,21 @@ const Home = () => {
       </div>
       <div className={classes.header}>
         <h2 className={classes.headding}>Search For Any City Weather</h2>
-        <form onSubmit={submitChangeHandeler}>
+        <form onSubmit={submitChangeHandler}>
           <input
             type="text"
             placeholder="Enter A City"
             value={cityInput}
-            onChange={changeHandeler}
+            onChange={changeHandler}
             className={classes.input}
           />
-          <div>
-            <button type="submit" className={classes['serch-btn']}>Check Weather</button>
-          </div>
+          <button type="submit" className={classes['serch-btn']}>Search</button>
         </form>
       </div>
-      <h2 className={classes['heading-secondary']}>Check Some Of The City Weather</h2>
       <div className={classes['city-container']}>
-        {cities.map((city, index) => {
-          const isDark = [1, 2, 5, 6].includes(index);
-          const classNames = `${classes.cities} ${isDark ? classes.dark : ''}`;
+        {filteredCities.map((city, index) => {
+          const isDark = [0, 3, 4, 7].includes(index);
+          const classNames = `${classes.cities} ${isDark ? classes.dark : classes.light}`;
 
           return (
             <button
@@ -76,7 +85,6 @@ const Home = () => {
             </button>
           );
         })}
-
       </div>
     </div>
   );
